@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-#   [ ] done
+#   [X] done
   # User Story 1, Parent Index 
   # For each parent table
   # As a visitor
