@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   get "/towns", to: "towns#index"
+  get '/towns/:id', to: 'towns#show'
 end

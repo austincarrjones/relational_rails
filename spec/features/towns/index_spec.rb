@@ -1,13 +1,13 @@
 require 'rails_helper'
 
-#   [X] done
+  # [X] done
   # User Story 1, Parent Index 
   # For each parent table
   # As a visitor
   # When I visit '/parents'
   # Then I see the name of each parent record in the system
 
-RSpec.describe "towns index page" do
+RSpec.describe "US1 towns index page" do
   context "As a User" do
     describe "when I visit towns index" do
       it "I can see the name of each town record" do
