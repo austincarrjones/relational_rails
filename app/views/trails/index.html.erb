@@ -1,0 +1,8 @@
+<h1>Trails</h1>
+
+<% @trails.each do |trail| %>
+  <p>Trail Name: <%= trail.name %></p>
+  <p>Difficulty: <%= trail.difficulty %></p>
+  <p>Distance: <%= trail.distance %></p>
+  <p>Downhill Only? : <%= trail.downhill_only %></p>
+  <% end %>
