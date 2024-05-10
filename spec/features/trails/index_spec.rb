@@ -7,7 +7,7 @@ require 'rails_helper'
 # Then I see each Child in the system including the Child's attributes
 # (data from each column that is on the child table)
 
-RSpec.describe 'US3 trails index page' do
+RSpec.describe 'trails index page' do
   context 'as a user' do
     describe 'when I visit trails index' do
       it 'I can see the name of each trail record' do

@@ -7,7 +7,7 @@ require 'rails_helper'
 # Then I see the child with that id including the child's attributes
 # (data from each column that is on the child table)
 
-RSpec.describe 'US4 trails show page' do
+RSpec.describe 'trails show page' do
   context 'as a user' do
     describe 'when I visit trails/:id' do 
       it 'I can see that trail and attributes' do
