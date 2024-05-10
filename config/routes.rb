@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get '/towns', to: 'towns#index'
   get '/towns/:id', to: 'towns#show'
   get '/trails', to: 'trails#index'
+  get '/trails/:id', to: 'trails#show'
 end
