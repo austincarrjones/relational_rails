@@ -8,13 +8,13 @@ require 'rails_helper'
   # Then I see the name of each parent record in the system
 
 RSpec.describe "US1 towns index page" do
-  context "As a User" do
-    describe "when I visit towns index" do
-      it "I can see the name of each town record" do
+  context 'As a User' do
+    describe 'when I visit towns index' do
+      it 'I can see the name of each town record' do
         breck = Town.create!(name: "Breckenridge")
         frisco = Town.create!(name: "Frisco")
 
-        visit "/towns"
+        visit '/towns'
         # save_and_open_page
         expect(page).to have_content("Breckenridge")
         expect(page).to have_content("Frisco")
