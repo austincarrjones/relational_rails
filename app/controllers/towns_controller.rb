@@ -1,7 +1,8 @@
 class TownsController < ApplicationController
 
   def index
-    @towns = Town.all
+    @towns = Town.all.order(created_at: :asc)
+    #binding.pry
   end
 
   def show
