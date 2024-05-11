@@ -1,5 +1,5 @@
 <h1>Towns</h1>
 
 <% @towns.each do |town| %>
-  <p>Town Name: <%= town.name %></p>
+  <p>Name: <%= town.name %> - created at: <%= town.created_at %></p>
 <% end %>
