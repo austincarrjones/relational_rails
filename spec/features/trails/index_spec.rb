@@ -20,6 +20,9 @@ RSpec.describe 'trails index page' do
         expect(page).to have_content("Side Door")
         expect(page).to have_content("Bettys's")
       end
+
+      
+      
     end
   end
 end

@@ -6,7 +6,7 @@ class TownsController < ApplicationController
   end
 
   def show
-    # binding.pry
     @town = Town.find(params[:id])
+    # binding.pry
   end
 end

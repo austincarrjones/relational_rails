@@ -18,7 +18,6 @@ RSpec.describe 'Towns trails index' do
         sedona = Town.create!(name: "Sedona")
         ridge = sedona.trails.create!(name: "Ridge", difficulty: "Difficult", distance: 3, downhill_only: true)
 
-
         visit "/towns/#{breck.id}/trails"
          save_and_open_page
         expect(page).to have_content(sidedoor.name)
