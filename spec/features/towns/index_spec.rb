@@ -7,14 +7,14 @@ require 'rails_helper'
 # When I visit '/parents'
 # Then I see the name of each parent record in the system
 
-# [ ] done
+# [X] done
 # User Story 6, Parent Index sorted by Most Recently Created 
 # As a visitor
 # When I visit the parent index,
 # I see that records are ordered by most recently created first
 # And next to each of the records I see when it was created
 
-# [ ] done
+# [X] done
 # User Story 8, Child Index Link
 # As a visitor
 # When I visit any page on the site
@@ -55,8 +55,7 @@ RSpec.describe 'towns index page' do
       it 'I see a link at the top of the page that takes me to the Trails Index' do
         visit '/towns'
         # save_and_open_page
-        
-        expect(page).to have_link("All Trails"), href: '/trails'
+        expect(page).to have_link("All Trails", href: '/trails')
       end
     end
   end

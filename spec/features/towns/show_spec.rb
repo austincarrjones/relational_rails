@@ -31,7 +31,7 @@ RSpec.describe 'towns show page' do
         breck = Town.create!(name: "Breckenridge", year_round_riding: false, population: 5078)
         sedona = Town.create!(name: "Sedona", year_round_riding: true, population: 10031)
         sidedoor = breck.trails.create!(name: "Side Door", difficulty: "Intermediate/Difficult", distance: 2, downhill_only: true)
-        bettys = breck.trails.create!(name: "Bettys's", difficulty: "Intermediate", distance: 1, downhill_only: false)
+        bettys = breck.trails.create!(name: "Betty's", difficulty: "Intermediate", distance: 1, downhill_only: false)
         
         visit "/towns/#{breck.id}"
         save_and_open_page
