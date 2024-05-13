@@ -20,6 +20,12 @@ require 'rails_helper'
 # When I visit any page on the site
 # Then I see a link at the top of the page that takes me to the Child Index
 
+# [X] done
+# User Story 9, Parent Index Link
+# As a visitor
+# When I visit any page on the site
+# Then I see a link at the top of the page that takes me to the Parent Index
+
 RSpec.describe 'towns index page' do
   context 'as a user' do
     describe 'when I visit towns index' do
@@ -56,6 +62,12 @@ RSpec.describe 'towns index page' do
         visit '/towns'
         # save_and_open_page
         expect(page).to have_link("All Trails", href: '/trails')
+      end
+
+      it 'I see a link at the top of the page that takes me to the Towns Index' do
+        visit '/trails'
+        # save_and_open_page
+        expect(page).to have_link("All Towns", href: '/towns')
       end
     end
   end

@@ -13,6 +13,12 @@ require 'rails_helper'
 # When I visit a parent's show page
 # I see a count of the number of children associated with this parent
 
+# [ ] done
+# User Story 10, Parent Child Index Link
+# As a visitor
+# When I visit a parent show page ('/parents/:id')
+# Then I see a link to take me to that parent's `child_table_name` page ('/parents/:id/child_table_name')
+
 RSpec.describe 'towns show page' do
   context 'as a user' do
     describe 'when I visit towns/:id' do
@@ -34,8 +40,17 @@ RSpec.describe 'towns show page' do
         bettys = breck.trails.create!(name: "Betty's", difficulty: "Intermediate", distance: 1, downhill_only: false)
         
         visit "/towns/#{breck.id}"
-        save_and_open_page
         expect(page).to have_content("Number of trails: 2")
+      end
+
+      it 'I see a link to take me to that towns trails page' do
+        breck = Town.create!(name: "Breckenridge", year_round_riding: false, population: 5078)
+        sidedoor = breck.trails.create!(name: "Side Door", difficulty: "Intermediate/Difficult", distance: 2, downhill_only: true)
+        bettys = breck.trails.create!(name: "Betty's", difficulty: "Intermediate", distance: 1, downhill_only: false)
+
+        visit "/towns/#{breck.id}"
+        save_and_open_page
+        expect(page).to have_link("Trails", href: "/towns/#{breck.id}/trails")
       end
     end
   end
