@@ -1,0 +1,16 @@
+<%= form_with url: "/towns", method: :post, local: true do |form| %>
+<h2>Enter a new town:</h2>
+  <%= form.label :name %>
+  <%= form.text_field :name %><br/>
+  <br/>
+  <%= form.label :population %>
+  <%= form.number_field :population, in:1..100000, step: 1 %><br/>
+
+  <p>Year Round Riding?</p>
+  <%= form.radio_button :year_round_riding, true %>
+  <%= form.label :year_round_riding, "Yes" %>
+  <%= form.radio_button :year_round_riding, false %>
+  <%= form.label :year_round_riding, "No" %><br/>
+  <br/>
+  <%= form.submit "Create Town" %>
+<% end %>

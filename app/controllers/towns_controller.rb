@@ -7,4 +7,13 @@ class TownsController < ApplicationController
   def show
     @town = Town.find(params[:id])
   end
+
+  def new
+  end
+
+  def create
+    # binding.pry
+    town = Town.create(name: params[:name], population: params[:population])
+    redirect_to "/towns"
+  end
 end

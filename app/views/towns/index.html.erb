@@ -1,5 +1,6 @@
 <h1>Towns</h1>
-
+<%# <p><a href="/towns/new">New Town</a></p> %>
+<%= link_to "New Town", "/towns/new" %>
 <% @towns.each do |town| %>
   <p>Name: <%= town.name %> - created at: <%= town.created_at %></p>
 <% end %>
