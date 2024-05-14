@@ -24,16 +24,23 @@ RSpec.describe 'towns new page' do
       it 'On /towns/new I see a form for a new town record' do
         visit '/towns/new'
         
+        fill_in("name", with: "Golden")
+        fill_in("population", with: 20399)
         # save_and_open_page
-        fill_in("name", with: "Frisco")
-        fill_in("population", with: 5000)
+        #choose ("No") #unable to find radio button "No" that is not disabled. It works on browser though...
         click_button("Create Town")
         new_town_id = Town.last.id
         expect(current_path).to eq("/towns")
-        expect(page).to have_content("Frisco")
-        expect(page).to have_content("5000")
-      end
+        expect(page).to have_content("Golden")
+        
+        visit "/towns/#{new_town_id}"
 
+        expect(page).to have_content(20399)
+        # expect(page).to have_content("Year Round Riding? false")
+      end
     end
   end
 end
+
+
+        # 

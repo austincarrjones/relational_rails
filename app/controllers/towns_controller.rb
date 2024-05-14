@@ -12,8 +12,7 @@ class TownsController < ApplicationController
   end
 
   def create
-    # binding.pry
-    town = Town.create(name: params[:name], population: params[:population])
+    town = Town.create(name: params[:name], population: params[:population], year_round_riding: params[:year_round_riding])
     redirect_to "/towns"
   end
 end
