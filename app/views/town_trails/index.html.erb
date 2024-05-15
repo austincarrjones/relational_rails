@@ -1,5 +1,7 @@
 <h1>Town Trails</h1>
 
+<%= link_to "Create Trail", "/towns/#{@town.id}/trails/new" %>
+
 <% @trails.each do |trail| %>
 <p><%= trail.name %></p>
   <p><%= trail.difficulty %></p>

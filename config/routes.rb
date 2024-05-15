@@ -15,4 +15,8 @@ Rails.application.routes.draw do
   get '/trails/:id', to: 'trails#show'
   get '/towns/:town_id/trails', to: 'town_trails#index'
   post '/towns', to: 'towns#create'
+  get '/towns/:id/edit', to: 'towns#edit'
+  patch '/towns/:id', to: 'towns#update'
+  get '/towns/:town_id/trails/new', to: 'trails#new'
+  post '/towns/:town_id/trails', to: 'trails#create'
 end

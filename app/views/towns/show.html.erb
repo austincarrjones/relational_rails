@@ -3,3 +3,4 @@
 <p>Year Round Riding? <%= @town.year_round_riding %></p>
 <p>Number of trails: <%= @town.trails.count %></p>
 <p><a href="/towns/<%= @town.id %>/trails">Trails</a></p>
+<%= link_to "Update Town", "/towns/#{@town.id}/edit" %>
