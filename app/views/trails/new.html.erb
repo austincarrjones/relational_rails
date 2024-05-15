@@ -1,0 +1,6 @@
+<%= form_with url: "/towns/#{@town.id}/trails", method: :post, local: true do |form| %>
+<h2>Enter a New Trail:</h2>
+  <%= form.label :name %>
+  <%= form.text_field :name %><br/>
+  <%= form.submit "Create Trail" %>
+<% end %>

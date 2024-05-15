@@ -9,8 +9,14 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   get '/towns', to: 'towns#index'
+  get 'towns/new', to: 'towns#new'
   get '/towns/:id', to: 'towns#show'
   get '/trails', to: 'trails#index'
   get '/trails/:id', to: 'trails#show'
   get '/towns/:town_id/trails', to: 'town_trails#index'
+  post '/towns', to: 'towns#create'
+  get '/towns/:id/edit', to: 'towns#edit'
+  patch '/towns/:id', to: 'towns#update'
+  get '/towns/:town_id/trails/new', to: 'trails#new'
+  post '/towns/:town_id/trails', to: 'trails#create'
 end

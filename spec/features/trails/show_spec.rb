@@ -16,7 +16,6 @@ RSpec.describe 'trails show page' do
         bettys = breck.trails.create!(name: "Bettys's", difficulty: "Intermediate", distance: 1, downhill_only: false)
         
         visit "/trails/#{sidedoor.id}"
-        save_and_open_page
         expect(page).to have_content(sidedoor.name)
         expect(page).to have_content(sidedoor.distance)
         expect(page).to have_content(sidedoor.difficulty)

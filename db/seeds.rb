@@ -8,3 +8,9 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
+breck = Town.create!(name: "Breckenridge", year_round_riding: false, population: 5078)
+frisco = Town.create!(name: "Frisco", year_round_riding: false, population: 2913, created_at: Time.now - 1.day)
+sedona = Town.create!(name: "Sedona", year_round_riding: true, population: 10031, created_at: Time.now - 2.day)
+
+sidedoor = breck.trails.create!(name: "Side Door", difficulty: "Intermediate/Difficult", distance: 2, downhill_only: true)
+bettys = breck.trails.create!(name: "Betty's", difficulty: "Intermediate", distance: 1, downhill_only: false)

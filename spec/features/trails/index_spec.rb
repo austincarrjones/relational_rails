@@ -16,10 +16,12 @@ RSpec.describe 'trails index page' do
         bettys = breck.trails.create!(name: "Bettys's", difficulty: "Intermediate", distance: 1, downhill_only: false)
 
         visit '/trails'
-        #save_and_open_page
         expect(page).to have_content("Side Door")
         expect(page).to have_content("Bettys's")
       end
+
+      
+      
     end
   end
 end
