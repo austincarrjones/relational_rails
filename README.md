@@ -1,5 +1,7 @@
 # README
 
+Database Design: https://erd.dbdesigner.net/designer/schema/1715015472-rails
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
